@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Airplane.init({
     modelNumber: {
-      // ? This is javascript level constraint
+      // ? This is JavaScript level constraint
       type: DataTypes.STRING,
       allowNull: false
     },
