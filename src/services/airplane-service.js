@@ -1,4 +1,5 @@
 const {AirplaneRepository} = require('../repositories');
+const airplaneRepository = require("../repositories/crud-repository");
 const airPlaneRepository = new AirplaneRepository();
 async function createAirplane(data){
     try{
@@ -16,6 +17,22 @@ async function getAirplanes(){
         throw e ;
     }
 }
+async function getAirplaneById(id){
+    try{
+        const airplane = await airPlaneRepository.get(id);
+        return airplane;
+    }catch (e){
+        throw e ;
+    }
+}
+async function destroyAirplane(id){
+    try{
+        const result = await airPlaneRepository.destroy(id);
+        return result;
+    }catch (e) {
+        throw e ;
+    }
+}
 module.exports = {
-    createAirplane , getAirplanes
+    createAirplane , getAirplanes , getAirplaneById ,destroyAirplane
 }

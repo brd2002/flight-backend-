@@ -20,6 +20,7 @@ class CrudRepository{
                 }
             });
             return response;
+            // console.log(response)
         }catch (e) {
             Logger.error('Something went wrong in crud repo : in destroy function');
             throw e;
