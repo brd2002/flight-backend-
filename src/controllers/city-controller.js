@@ -29,6 +29,25 @@ async function createCity(req , res) {
         })
     }
 }
+async function getAllCity(req ,res) {
+    try {
+        const cities = await CityService.getAllCity();
+        return res.status(StatusCodes.OK).json({
+            success : true ,
+            message : 'Successfully created a city',
+            data: cities ,
+            error : {}
+        });
+    } catch (error) {
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+            success : false ,
+            message : "Something went wrong while creating city",
+            data : {} ,
+            error : error
+        })
+    }
+}
 module.exports = {
-    createCity
+    createCity ,
+    getAllCity
 }

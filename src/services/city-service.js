@@ -9,8 +9,16 @@ async function createCity(data) {
         throw e;
     }
 }
-
+async function getAllCity() {
+    try {
+        const cities= await cityRepository.getAll();
+        return cities;
+    } catch (error) {
+        throw e; 
+    }
+}
 module.exports = {
     createCity , 
+    getAllCity
 
 }
