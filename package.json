@@ -7,7 +7,7 @@
     "dev": "npx nodemon src/index.js",
     "test": "jest"
   },
-  "author": "Sanket",
+  "author": "Bharat",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",

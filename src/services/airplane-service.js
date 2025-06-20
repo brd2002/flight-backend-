@@ -1,5 +1,4 @@
 const {AirplaneRepository} = require('../repositories');
-const airplaneRepository = require("../repositories/crud-repository");
 const airPlaneRepository = new AirplaneRepository();
 async function createAirplane(data){
     try{

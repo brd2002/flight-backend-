@@ -31,4 +31,29 @@ This project demonstrates how to set up **Jest** for testing a **Node.js** appli
 * **DELETE** `localhost:8000/api/v1/airplanes/:id`
 * Path Parameter: `id` (e.g. `123`)
 * Response: Success message (e.g. `{ message: 'Airplane deleted successfully' }`)
-[/Snippet]
+
+## Airports
+
+### Create Airport
+
+* **POST** `localhost:8000/api/v1/airports`
+* Request Body: Airplane data (e.g. `{ name: 'Indira Gandhi International Airport',
+ code: 'DEL', address:'Palam, Delhi, India',cityId:3 }`)
+* Response: Created Airport object
+
+### Get All Airports
+
+* **GET** `localhost:8000/api/v1/airports`
+* Response: Array of all Airport objects
+
+### Get Airport by ID
+
+* **GET** `localhost:8000/api/v1/airports/:id`
+* Path Parameter: `id` (e.g. `123`)
+* Response: Airport object with matching `id`
+
+### Delete Airport by ID
+
+* **DELETE** `localhost:8000/api/v1/airports/:id`
+* Path Parameter: `id` (e.g. `123`)
+* Response: Success message (e.g. `{ message: 'Airport deleted successfully' }`)
