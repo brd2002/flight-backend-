@@ -5,4 +5,5 @@ class CityRepository extends  crudRepository {
         super(City);
     }
 }
+
 module.exports = CityRepository;
