@@ -5,7 +5,6 @@ This project demonstrates how to set up **Jest** for testing a **Node.js** appli
 > 📖 Reference: [How to set up Jest for ES Module](https://how-to.dev/how-to-set-up-jest-for-es-module)
 
 ---
-[Snippet identifier=code_block]
 # API Endpoints
 
 ## Airplanes
