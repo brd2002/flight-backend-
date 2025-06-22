@@ -11,9 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.Airplane, { foreignKey: 'airplaneId' });
-      this.belongsTo(models.Airport, { foreignKey: 'departureAirportId' });
-      this.belongsTo(models.Airport, { foreignKey: 'arivalAirportId' });
+      this.belongsTo(models.Airplane, { foreignKey: 'airplaneId' , as: 'Airplane_Detail' });
+      // NOTE if the relation key is not primary key then you need to specify the target key
+      this.belongsTo(models.Airport, { foreignKey: 'departureAirportId' , as: 'DepartureAirport' , targetKey:'code' } );
+      this.belongsTo(models.Airport, { foreignKey: 'arivalAirportId' , as: 'ArrivalAirport' , targetKey:'code' } );
     }
   }
   flight.init({

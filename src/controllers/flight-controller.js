@@ -42,7 +42,7 @@ async function getAllFlights(req , res) {
             success : false ,
             message : "Something went wrong while searching flight",
             data : {},
-            error : e
+            error : error
         })
     }
 }
